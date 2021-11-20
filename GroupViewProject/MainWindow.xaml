@@ -1,0 +1,28 @@
+﻿<Window x:Class="GroupViewProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GroupViewProject"
+        mc:Ignorable="d"
+        Title="Group" Height="345.061" Width="656.408">
+    <Canvas Margin="0,0,-8,0">
+        <Canvas.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFF76565" Offset="0"/>
+                <GradientStop Color="#FF6ECB38" Offset="1"/>
+            </LinearGradientBrush>
+        </Canvas.Background>
+        <Label Content="Название специальности:" Canvas.Left="10" Canvas.Top="20" Width="225" />
+        <TextBox x:Name="tbNameGroup" Height="33" Width="225" Canvas.Left="10" Canvas.Top="51" />
+        <TextBox x:Name="tbNumberGroup" Height="33" Width="225" Canvas.Left="10" Canvas.Top="120" />
+        <TextBox x:Name="tbCurator" Height="33" Width="225" Canvas.Left="10" Canvas.Top="184" />
+        <Label Content="Номер группы:" Canvas.Left="10" Canvas.Top="89" Width="225" />
+        <Label Content="ФИО Куратора:" Canvas.Left="10" Canvas.Top="158" Width="225" />
+        <Button x:Name="btnAdd" Content="Добавить" Height="26" Width="225" Canvas.Left="10" Canvas.Top="222" VerticalAlignment="Top" HorizontalAlignment="Center" Click="btnAdd_Click" Background="#FF97B8FF"/>
+        <Label Content="Список групп:" Canvas.Top="20" RenderTransformOrigin="3.506,2.192" Canvas.Left="240" Width="407" />
+        <Button Content="Удалить" Canvas.Left="10" Canvas.Top="284" Width="225" Click="Button_Click" Background="#FF97B8FF" Height="26"/>
+        <Button Content="Обновить" Canvas.Left="10" Canvas.Top="253" Width="225" Click="Button_Click_1" Background="#FF97B8FF" Height="26"/>
+        <DataGrid x:Name="dbViewGroup" Height="259" Width="407" SelectionChanged="lvViewGroup_SelectionChanged" Canvas.Top="51" Canvas.Left="240"/>
+    </Canvas>
+</Window>
